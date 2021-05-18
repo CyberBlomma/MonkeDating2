@@ -1,0 +1,45 @@
+{
+    "scenes": [
+
+        {
+            "name": "ch1P2Forest1",
+            "backgroundPath": "img/classroom-day.png",
+            "children": [
+                "ch1P3Forest1",
+                "ch1P3Cemetary1"
+            ],
+            "dialogue": [
+                {
+                    "type": "textbox",
+                    "content": "Marhaba, $p",
+                    "characters": [
+                        "Vandela"
+                    ],
+                    "dialogueOptions": [
+                        {
+                            "text": "go to ch1P3",
+                            "action": "ch1P3Cemetary1"
+                        },
+                        {
+                            "text": "keep talking",
+                            "action": null
+                        }
+                    ]
+                },
+                {}
+            ]
+        },
+
+        {
+            "name": "ch1P3Cemetary1",
+            "backgroundPath": "img/graveyard-day.png",
+            "children": [
+                "ch1P3Hallway1",
+                "ch1P3Cemetary1"
+            ],
+            "dialogue": [
+                {}
+            ]
+        }
+    ]
+}
