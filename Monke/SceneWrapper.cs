@@ -32,11 +32,9 @@ namespace Monke
         }
 
         //return an int from the SceneWrapper sceneMap pls :dorime:
-        public static int ChangeScene(string nextScene)
+        public static void ChangeScene(string nextScene)
         {
-            int n = 0;
-
-            return n;
+            Console.WriteLine(nextScene);
         }
 
     }

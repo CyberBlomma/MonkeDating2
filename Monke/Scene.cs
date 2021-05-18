@@ -12,14 +12,15 @@ namespace Monke
         public List<string> children = new List<string>();
 
         public List<Dialogue> dialogue = new List<Dialogue>();
+
+        private int dialogueIndex = 0;
         private bool loaded = false;
 
         public void Init()
         {
             background = Raylib.LoadTexture(backgroundPath);
+
             loaded = true;
-
-
         }
 
 
@@ -29,18 +30,14 @@ namespace Monke
                 Init();
             }
             
-            // Raylib.BeginDrawing();
             Raylib.ClearBackground(Color.BLANK);
     
             Raylib.DrawTexture(background, 0, 0, Color.WHITE);
 
-            // Raylib.EndDrawing();
 
         }
 
-        public void Conversation() {
-            
-
+        public void StartDialogue(int index) {
 
         }
 

@@ -34,7 +34,6 @@ namespace Monke
             SceneWrapper sw = JsonConvert.DeserializeObject<SceneWrapper>(contents);
             sw.Init();
 
-
             string characterFile = @"Characters.json";
             string characterContent = File.ReadAllText(characterFile);
             CharacterWrapper cw = JsonConvert.DeserializeObject<CharacterWrapper>(characterContent); 
