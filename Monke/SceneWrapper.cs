@@ -21,5 +21,23 @@ namespace Monke
                 i++;
             }
         }
+
+
+        private int currentScene = 0;
+        public void DrawScene()
+        {
+            scenes[0].Draw();
+            scenes[0].dialogue[0].Draw();
+
+        }
+
+        //return an int from the SceneWrapper sceneMap pls :dorime:
+        public static int ChangeScene(string nextScene)
+        {
+            int n = 0;
+
+            return n;
+        }
+
     }
 }

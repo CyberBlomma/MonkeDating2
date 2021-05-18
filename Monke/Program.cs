@@ -30,10 +30,14 @@ namespace Monke
             string fileName = @"Data.json";
             System.Console.WriteLine(File.Exists(fileName));
 
-
             string contents = File.ReadAllText(fileName);
             SceneWrapper sw = JsonConvert.DeserializeObject<SceneWrapper>(contents);
             sw.Init();
+
+
+            string characterFile = @"Characters.json";
+            string characterContent = File.ReadAllText(characterFile);
+            CharacterWrapper cw = JsonConvert.DeserializeObject<CharacterWrapper>(characterContent); 
 
 
             int x = 0;
@@ -44,8 +48,7 @@ namespace Monke
             {
                 Raylib.BeginDrawing();
 
-                sw.scenes[0].Draw();
-                sw.scenes[0].dialogue[0].Draw();
+                sw.DrawScene();
 
                 Raylib.EndDrawing();
 
