@@ -5,10 +5,10 @@ namespace Monke
 {
     public class SceneWrapper
     {
-        public Scene[] scenes;
-        public Dictionary<string, int> sceneMap;
+        public static Scene[] scenes;
+        public static Dictionary<string, int> sceneMap;
 
-        public void Init()
+        public static void Init()
         {
             sceneMap = new Dictionary<string, int>();
 
@@ -23,11 +23,11 @@ namespace Monke
         }
 
 
-        private int currentScene = 0;
-        public void DrawScene()
+        public static int currentScene = 0;
+        public static void DrawScene()
         {
-            scenes[0].Draw();
-            scenes[0].dialogue[0].Draw();
+            scenes[currentScene].Draw();
+            scenes[currentScene].dialogue[0].Draw();
 
         }
 
